@@ -8,42 +8,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleCalculator.CalculatorReference {
+namespace TestCalculations.Calculator {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalculatorReference.CalculatorSoap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Calculator.CalculatorSoap")]
     public interface CalculatorSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Add", ReplyAction="*")]
         double Add(double f1, double f2);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Add", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> AddAsync(double f1, double f2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Subtrct", ReplyAction="*")]
         double Subtrct(double f1, double f2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Subtrct", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> SubtrctAsync(double f1, double f2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Multiply", ReplyAction="*")]
         double Multiply(double f1, double f2);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Multiply", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> MultiplyAsync(double f1, double f2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Divide", ReplyAction="*")]
         double Divide(double f1, double f2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Divide", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> DivideAsync(double f1, double f2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SquareRoot", ReplyAction="*")]
         double SquareRoot(double f1);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SquareRoot", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> SquareRootAsync(double f1);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Halve", ReplyAction="*")]
         double Halve(double f1);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Halve", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> HalveAsync(double f1);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Quarter", ReplyAction="*")]
         double Quarter(double f1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Quarter", ReplyAction="*")]
+        System.Threading.Tasks.Task<double> QuarterAsync(double f1);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CalculatorSoapChannel : SimpleCalculator.CalculatorReference.CalculatorSoap, System.ServiceModel.IClientChannel {
+    public interface CalculatorSoapChannel : TestCalculations.Calculator.CalculatorSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorSoapClient : System.ServiceModel.ClientBase<SimpleCalculator.CalculatorReference.CalculatorSoap>, SimpleCalculator.CalculatorReference.CalculatorSoap {
+    public partial class CalculatorSoapClient : System.ServiceModel.ClientBase<TestCalculations.Calculator.CalculatorSoap>, TestCalculations.Calculator.CalculatorSoap {
         
         public CalculatorSoapClient() {
         }
@@ -68,28 +89,56 @@ namespace SimpleCalculator.CalculatorReference {
             return base.Channel.Add(f1, f2);
         }
         
+        public System.Threading.Tasks.Task<double> AddAsync(double f1, double f2) {
+            return base.Channel.AddAsync(f1, f2);
+        }
+        
         public double Subtrct(double f1, double f2) {
             return base.Channel.Subtrct(f1, f2);
+        }
+        
+        public System.Threading.Tasks.Task<double> SubtrctAsync(double f1, double f2) {
+            return base.Channel.SubtrctAsync(f1, f2);
         }
         
         public double Multiply(double f1, double f2) {
             return base.Channel.Multiply(f1, f2);
         }
         
+        public System.Threading.Tasks.Task<double> MultiplyAsync(double f1, double f2) {
+            return base.Channel.MultiplyAsync(f1, f2);
+        }
+        
         public double Divide(double f1, double f2) {
             return base.Channel.Divide(f1, f2);
+        }
+        
+        public System.Threading.Tasks.Task<double> DivideAsync(double f1, double f2) {
+            return base.Channel.DivideAsync(f1, f2);
         }
         
         public double SquareRoot(double f1) {
             return base.Channel.SquareRoot(f1);
         }
         
+        public System.Threading.Tasks.Task<double> SquareRootAsync(double f1) {
+            return base.Channel.SquareRootAsync(f1);
+        }
+        
         public double Halve(double f1) {
             return base.Channel.Halve(f1);
         }
         
+        public System.Threading.Tasks.Task<double> HalveAsync(double f1) {
+            return base.Channel.HalveAsync(f1);
+        }
+        
         public double Quarter(double f1) {
             return base.Channel.Quarter(f1);
+        }
+        
+        public System.Threading.Tasks.Task<double> QuarterAsync(double f1) {
+            return base.Channel.QuarterAsync(f1);
         }
     }
 }
